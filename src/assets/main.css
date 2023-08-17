@@ -1,0 +1,9 @@
+html .body{
+  margin: 0;
+  padding: 0;
+}
+
+#app{
+  margin: 29px 33px 0px 33px;
+  min-height: 100vh;
+}
