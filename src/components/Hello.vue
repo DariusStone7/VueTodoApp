@@ -1,11 +1,14 @@
-<template>
-  <p>Hello, welcome !</p>
-</template>
-
-<script>
-
+<script setup>
 </script>
 
-<style>
+<template>
+  <div class="message">
+    <h1>Hello, welcome to your Todo App !</h1>
+  </div>
+</template>
 
+<style scoped>
+    .message{
+        text-align: center;
+    }
 </style>
