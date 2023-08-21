@@ -1,9 +1,11 @@
 <script setup>
 
-    import { ref, defineProps, defineEmits} from 'vue';
+    import { ref, defineProps, defineEmits, onMounted, onUnmounted} from 'vue';
+    import { formAction } from '../states/formAction';
 
     const props = defineProps(['state', 'index']);
     const emits = defineEmits(['toggleDescription', 'toggleDelete', 'toggleUpdate']);
+
 
     // const toggleDescription = (index) => {
     //     // Modifier l'état de description pour l'indice donné
@@ -22,10 +24,12 @@
     }
 
     const handleUpdateTodo = () =>{
-        
-        emits('toggleUpdate', props.index)
-    }
-    
+
+        emits('toggleUpdate', props.index);
+        formAction.update = true;
+
+        }
+
 
 </script>
 
